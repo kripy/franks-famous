@@ -28,8 +28,8 @@ class App < Sinatra::Base
     ]
     js :app_js_modernizr, [ '/js/vendor/modernizr-2.6.2.min.js' ]
 
-    # Heroku doesn't like this but assets end up minified anyway.
-    # Left these lins in for reference.
+    # Heroku doesn't like this call but assets end up minified anyway.
+    # Left them in in for reference.
     #css_compression :sass
     #js_compression  :jsmin
   end

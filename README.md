@@ -16,7 +16,7 @@ Then in terminal, clone me:
 
 ```
 $ git clone git@github.com:/kripy/franks-famous my-franks-famous
-$ cd my-pizza-man
+$ cd my-franks-famous
 $ foreman start
 ```
 
