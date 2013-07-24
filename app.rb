@@ -61,7 +61,6 @@ class App < Sinatra::Base
 
   get '/' do
     @page_title = 'Page Title'
-
     mustache :index
   end
 end
