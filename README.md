@@ -15,7 +15,7 @@ Firstly, make sure you've [installed Ruby](http://www.ruby-lang.org/en/). Also, 
 Then in terminal, clone me:
 
 ```
-$ git clone git@github.com:/kripy/franks-famous my-franks-famous
+$ git clone https://github.com/kripy/franks-famous my-franks-famous
 $ cd my-franks-famous
 $ foreman start
 ```

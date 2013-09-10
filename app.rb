@@ -1,9 +1,9 @@
-require 'sinatra/base'
-require 'sinatra/assetpack'
-require 'compass'
-require 'compass-h5bp'
-require 'sinatra/support'
-require 'mustache/sinatra'
+require "sinatra/base"
+require "sinatra/assetpack"
+require "compass"
+require "compass-h5bp"
+require "sinatra/support"
+require "mustache/sinatra"
 
 class App < Sinatra::Base
   base = File.dirname(__FILE__)
@@ -17,16 +17,16 @@ class App < Sinatra::Base
   set :sass, { :load_paths => sass[:load_paths] + [ "#{base}/app/css" ] }
 
   assets do
-    serve '/js',    from: 'app/js'
-    serve '/css',   from: 'app/css'
-    serve '/img',   from: 'app/img'
+    serve "/js",    from: "app/js"
+    serve "/css",   from: "app/css"
+    serve "/img",   from: "app/img"
 
-    css :app_css, [ '/css/*.css' ]
+    css :app_css, [ "/css/*.css" ]
     js :app_js, [
-      '/js/*.js',
-      '/js/vendor/jquery-1.9.1.min.js',
+      "/js/*.js",
+      "/js/vendor/jquery-1.9.1.min.js",
     ]
-    js :app_js_modernizr, [ '/js/vendor/modernizr-2.6.2.min.js' ]
+    js :app_js_modernizr, [ "/js/vendor/modernizr-2.6.2.min.js" ]
 
     # Heroku doesn't like this call but assets end up minified anyway.
     # Left them in in for reference.
@@ -59,8 +59,8 @@ class App < Sinatra::Base
     post(path, opts, &block)
   end   
 
-  get '/' do
-    @page_title = 'Page Title'
+  get "/" do
+    @page_title = "Page Title"
     mustache :index
   end
 end
